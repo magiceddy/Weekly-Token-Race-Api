@@ -1,0 +1,21 @@
+{
+  "name": "Weekly-Token-Race-Api",
+  "version": "0.0.1",
+  "description": "Weekly Token Race API wrapper",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/magiceddy/Weekly-Token-Race-Api.git",
+  "author": "magiceddy <rinaldo.rossi.web@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
