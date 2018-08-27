@@ -5,8 +5,8 @@ import { addressInfo } from '../../__mocks__/data';
 let service;
 
 describe('EthplorerApiService', () => {
-  const baseUrl = service.baseUrl;
   service = new EthplorerApiService({});
+  const baseUrl = service.baseUrl;
 
   describe('constructor', () => {
     test('should use default value', () => {
