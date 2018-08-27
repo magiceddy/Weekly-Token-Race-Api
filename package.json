@@ -1,6 +1,6 @@
 {
-  "name": "Weekly-Token-Race-Api",
-  "version": "0.1.0",
+  "name": "@weeklyTokenRace/weekly-token-tace-api",
+  "version": "0.1.1",
   "description": "Weekly Token Race API wrapper",
   "scripts": {
     "dev": "webpack --mode development",
