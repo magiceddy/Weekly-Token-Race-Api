@@ -1,5 +1,5 @@
 {
-  "name": "@weeklyTokenRace/weekly-token-tace-api",
+  "name": "weekly-token-race-api",
   "version": "0.1.1",
   "description": "Weekly Token Race API wrapper",
   "scripts": {
