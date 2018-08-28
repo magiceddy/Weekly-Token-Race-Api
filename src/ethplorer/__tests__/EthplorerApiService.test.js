@@ -1,5 +1,5 @@
 import mockAxios from 'axios';
-import { EthplorerApiService } from '../EthplorerApiService';
+import EthplorerApiService from '../EthplorerApiService';
 import { addressInfo } from '../../__mocks__/data';
 
 let service;
