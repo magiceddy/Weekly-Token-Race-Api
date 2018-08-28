@@ -6,7 +6,7 @@ export default class EthplorerApiService {
   * @param {baseUrl} string
   * @param {apiKey} string
   */
-  constructor({ baseUrl = 'http://api.ethplorer.io', apiKey = 'freekey' }) {
+  constructor ({ baseUrl = 'http://api.ethplorer.io', apiKey = 'freekey' }) {
     this.baseUrl = baseUrl;
     this.apiKey = apiKey;
   }
