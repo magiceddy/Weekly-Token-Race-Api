@@ -1,3 +1,5 @@
-export {
-  default as EthplorerApiService
-} from './src/ethplorer/EthplorerApiService';
+import EthplorerApiService from './src/ethplorer/EthplorerApiService';
+
+module.exports = {
+  EthplorerApiService
+}
