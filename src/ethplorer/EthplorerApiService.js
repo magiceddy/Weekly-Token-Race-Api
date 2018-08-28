@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-export class EthplorerApiService {
+export default class EthplorerApiService {
   /**
   * @constructor
   * @param {baseUrl} string
   * @param {apiKey} string
   */
-  constructor ({ baseUrl = 'http://api.ethplorer.io', apiKey = 'freekey' }) {
+  constructor({ baseUrl = 'http://api.ethplorer.io', apiKey = 'freekey' }) {
     this.baseUrl = baseUrl;
     this.apiKey = apiKey;
   }
