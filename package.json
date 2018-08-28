@@ -3,8 +3,6 @@
   "version": "0.1.1",
   "description": "Weekly Token Race API wrapper",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
     "test": "jest",
     "lint": "./node_modules/.bin/eslint src/**"
   },
@@ -30,9 +28,7 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^3.1.0",
     "jest": "^23.5.0",
-    "pre-push": "^0.1.1",
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0"
+    "pre-push": "^0.1.1"
   },
   "pre-push": [
     "lint",
