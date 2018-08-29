@@ -1,4 +1,4 @@
-export const addressInfo = {
+var addressInfo = {
   address: '0x86f7bb79564de79fff78ec2795cf58bed7034407',
   ETH: {
     balance: 8.95589125963
@@ -35,3 +35,7 @@ export const addressInfo = {
   ],
   countTxs: 79
 }
+
+module.exports = {
+  addressInfo
+};
