@@ -1,29 +1,16 @@
 var axios = require('axios');
 
+var ethplorerParams = { apiKey: 'freekey' };
 var ethplorerBaseUrl = 'http://api.ethplorer.io/';
 var weeklyTokenRaceStoreBaseUrl = 'http://localhost:3000/';
 
-var ethplorerParams = { apiKey: 'freekey' };
-var weeklyTokenRaceStoreParams = {};
-
 /**
   * Call axios get
-  * @param {string} url server url
-  * @param {object} params URL params
+  * @param {object} config Axios config object
   * @return {Promise<object, Error>}
   */
-function fetch (url, params) {
-  if (!params) {
-    throw new Error('params is required');
-  }
-
-  if (!url) {
-    throw new Error('url is required');
-  }
-
-  return axios.get(url, {
-    params: params
-  })
+function fetch (config) {
+  return axios(config)
     .then(function (res) {
       if (res.status !== 200) {
         throw new Error(res.status + ' ' + res.statusText);
@@ -43,8 +30,13 @@ function fetch (url, params) {
   */
 function getAddressInfo (address, params) {
   var p = Object.assign({}, ethplorerParams, params);
-  var url = ethplorerBaseUrl + 'getAddressInfo/' + address;
-  return fetch(url, p);
+  var config = {
+    baseUrl: ethplorerBaseUrl,
+    url: 'getAddressInfo/' + address,
+    method: 'get',
+    params: p
+  };
+  return fetch(config);
 }
 
 /**
@@ -52,10 +44,17 @@ function getAddressInfo (address, params) {
   * @param {object} params  URL params
   * @return {Promise<object, Error>}
   */
-function addUserTokens (params) {
-  var p = Object.assign({}, weeklyTokenRaceStoreParams, params);
-  var url = weeklyTokenRaceStoreBaseUrl + 'api/v1/tokens/bet/';
-  return fetch(url, p);
+function addUserTokens (weekHash, tokenList) {
+  var config = {
+    baseUrl: weeklyTokenRaceStoreBaseUrl,
+    url: '/api/v1/tokens/bet/',
+    method: 'post',
+    params: {
+      weekHash: weekHash,
+      tokenList: tokenList
+    }
+  };
+  return fetch(config);
 }
 
 module.exports = {
