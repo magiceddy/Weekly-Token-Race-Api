@@ -1,6 +1,6 @@
 {
   "name": "weekly-token-race-api",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Weekly Token Race API wrapper",
   "scripts": {
     "test": "jest",
