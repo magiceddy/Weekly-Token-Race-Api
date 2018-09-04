@@ -31,7 +31,7 @@ function fetch (config) {
 function getAddressInfo (address, params) {
   var p = Object.assign({}, ethplorerParams, params);
   var config = {
-    baseUrl: ethplorerBaseUrl,
+    baseURL: ethplorerBaseUrl,
     url: 'getAddressInfo/' + address,
     method: 'get',
     params: p
@@ -46,7 +46,7 @@ function getAddressInfo (address, params) {
   */
 function addUserTokens (weekHash, tokenList) {
   var config = {
-    baseUrl: weeklyTokenRaceStoreBaseUrl,
+    baseURL: weeklyTokenRaceStoreBaseUrl,
     url: '/api/v1/tokens/bet/',
     method: 'post',
     params: {
