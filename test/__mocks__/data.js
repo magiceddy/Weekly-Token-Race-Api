@@ -36,6 +36,9 @@ var addressInfo = {
   countTxs: 79
 }
 
+var storeHash = 'hurhciehvioervn';
+
 module.exports = {
-  addressInfo
+  addressInfo,
+  storeHash
 };

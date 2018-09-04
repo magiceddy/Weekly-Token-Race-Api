@@ -1,7 +1,10 @@
 var axios = require('axios');
 
 var ethplorerBaseUrl = 'http://api.ethplorer.io/';
+var weeklyTokenRaceStoreBaseUrl = 'http://localhost:3000/';
+
 var ethplorerParams = { apiKey: 'freekey' };
+var weeklyTokenRaceStoreParams = {};
 
 /**
   * Call axios get
@@ -44,6 +47,18 @@ function getAddressInfo (address, params) {
   return fetch(url, p);
 }
 
+/**
+  * Call api/v1/tokens/bet/ Api
+  * @param {object} params  URL params
+  * @return {Promise<object, Error>}
+  */
+function addUserTokens (params) {
+  var p = Object.assign({}, weeklyTokenRaceStoreParams, params);
+  var url = weeklyTokenRaceStoreBaseUrl + 'api/v1/tokens/bet/';
+  return fetch(url, p);
+}
+
 module.exports = {
-  getAddressInfo
+  getAddressInfo,
+  addUserTokens
 }
